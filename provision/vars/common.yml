@@ -1,0 +1,5 @@
+---
+    doc_root: /vagrant
+    sys_packages:
+      - unzip
+    dist: precise

@@ -1,0 +1,19 @@
+---
+
+- name: Create wso2is user account
+  user: name=wso2is comment="WSO2 Service Account" system=yes
+
+- name: Copy and Unzip the WSO2 installation
+  unarchive: src="files/{{wso2is_zip}}" dest=/opt creates="/opt/{{wso2is_dirname}}" owner=wso2is
+
+- name: Create Symbolic link to WSO2 IS installation
+  file: src="/opt/{{wso2is_dirname}}" dest=/opt/wso2is state=link
+
+- name: Copy over startup script.
+  copy: src=files/identity-server.sh dest=/etc/init.d/identity-server mode=0755
+
+- name: Configure service to start on boot
+  command: update-rc.d identity-server defaults
+
+- name: Ensure Identity Server is started
+  service: name=identity-server state=started

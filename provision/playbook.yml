@@ -1,0 +1,14 @@
+---
+- hosts: all
+  sudo: true
+  vars:
+    servername: wso2is.vb www.wso2is.vb 192.168.33.99
+    timezone: UTC
+    wso2is_zip: wso2is-5.0.0.zip
+    wso2is_dirname: "{{wso2is_zip[:wso2is_zip.index('.zip')]}}"
+  vars_files:
+    - vars/common.yml
+  roles:
+    #- init
+    #- briancoca.oracle_java7
+    - app
