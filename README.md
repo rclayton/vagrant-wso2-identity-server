@@ -1,6 +1,6 @@
 # WSO2 Identity Server - Vagrant (VirtualBox)
 
-I'm exploring the product and decided to role my own installation.
+I'm exploring the product and decided to roll my own installation.
 
 ## Requirements
 
@@ -18,4 +18,4 @@ I'm exploring the product and decided to role my own installation.
 ## Getting Started.
 
 1.  From the root directory: `vagrant up`.
-2.  You should be able to access Identity Server at https://localhost:9443/carbon (username=admin, password=admin).
+2.  You should be able to access Identity Server at [https://localhost:9443/carbon](https://localhost:9443/carbon) (username=*admin*, password=*admin*).
