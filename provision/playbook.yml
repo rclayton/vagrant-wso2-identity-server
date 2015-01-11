@@ -9,6 +9,6 @@
   vars_files:
     - vars/common.yml
   roles:
-    #- init
-    #- briancoca.oracle_java7
+    - init
+    - briancoca.oracle_java7
     - app
